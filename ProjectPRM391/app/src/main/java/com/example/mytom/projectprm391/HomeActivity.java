@@ -24,19 +24,23 @@ public class HomeActivity extends AppCompatActivity implements TabLayout.OnTabSe
         setContentView(R.layout.activity_home);
 
         //Adding toolbar to the activity
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar_home);
-        setSupportActionBar(toolbar);
+
+
 
         //Initializing the tablayout
         tabLayout = (TabLayout) findViewById(R.id.tablayout_home);
-        toolbar = (Toolbar) findViewById(R.id.toolbar_home);
-        setSupportActionBar(toolbar);
-        getSupportActionBar().setDisplayShowTitleEnabled(false);
+
+//        setSupportActionBar(toolbar);
+//        getSupportActionBar().setDisplayShowTitleEnabled(false);
         //Adding the tabs using addTab() method
-        tabLayout.addTab(tabLayout.newTab().setText("Exam"));
-        tabLayout.addTab(tabLayout.newTab().setText("History"));
-        tabLayout.addTab(tabLayout.newTab().setText("Sesstion"));
-        tabLayout.addTab(tabLayout.newTab().setText("Add Exam"));
+        tabLayout.addTab(tabLayout.newTab());
+        tabLayout.getTabAt(0).setIcon(getResources().getDrawable(R.drawable.exam_icon));
+        tabLayout.addTab(tabLayout.newTab());
+        tabLayout.getTabAt(1).setIcon(getResources().getDrawable(R.drawable.history_icon));
+        tabLayout.addTab(tabLayout.newTab());
+        tabLayout.getTabAt(2).setIcon(getResources().getDrawable(R.drawable.sesstion_icon));
+        tabLayout.addTab(tabLayout.newTab());
+        tabLayout.getTabAt(3).setIcon(getResources().getDrawable(R.drawable.add_icon));
         tabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
 
         //Initializing viewPager

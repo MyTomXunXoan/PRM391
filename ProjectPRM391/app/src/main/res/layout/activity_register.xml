@@ -129,7 +129,7 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:id="@+id/edtEmail_register"
-            android:inputType="textPassword"
+            android:inputType="textEmailAddress"
             android:hint="input your email"
             android:layout_alignBaseline="@+id/tvEmail"
             android:layout_alignBottom="@+id/tvEmail"
